@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    id: 'carecompass', name: 'CareCompass', subtitle: 'Medicine Recommendation System',
+    description: 'An educational health-insight web application that provides users with health-related insights and recommendations through a web interface.',
+    problem: 'Health information can be difficult to navigate without a clear way to organize user input and present helpful context.',
+    solution: 'A web interface for health assessments, educational recommendations, and personal reports, supported by a REST API.',
+    features: ['User authentication', 'Health assessment', 'Recommendations', 'Dashboard & history', 'Reports', 'REST API'],
+    technologies: ['React', 'Python', 'FastAPI', 'SQLite', 'REST API'],
+    live: 'https://medicine-recommendation-system-woad.vercel.app', backend: 'https://medicine-recommendation-system-1-zsdh.onrender.com', github: '', kind: 'care',
+  },
+  {
+    id: 'neuralretail', name: 'NeuralRetail', subtitle: 'AI Retail Analytics Dashboard',
+    description: 'A retail analytics dashboard concept bringing sales performance and machine learning insights into one view.',
+    problem: 'Retail teams need a practical overview of sales, customer behavior, and stock signals to guide decisions.',
+    solution: 'An analytics experience combining sales reporting with customer segmentation, forecasting, and inventory insights.',
+    features: ['Sales analytics', 'Customer segmentation', 'RFM analysis', 'K-Means', 'Demand forecasting', 'Churn prediction', 'Inventory optimization'],
+    technologies: ['Python', 'Pandas', 'NumPy', 'Streamlit', 'Machine Learning'],
+    live: '', github: '', kind: 'retail',
+  },
+  {
+    id: 'fraud', name: 'Financial Fraud Detection', subtitle: 'Transaction Analysis Demo',
+    description: 'An application for analyzing financial transactions and identifying potentially fraudulent patterns.',
+    problem: 'Transaction data can contain patterns that merit closer review, but those signals are not always easy to scan.',
+    solution: 'A portfolio demonstration that presents transaction details alongside a model risk score for exploratory analysis.',
+    features: ['Transaction analysis', 'Risk score display', 'Pattern exploration', 'Interactive dashboard'],
+    technologies: ['Python', 'Streamlit', 'Machine Learning', 'Data Analysis'],
+    live: 'https://financial-fraud-detection-bdvph5wt4xegflykckjfdl.streamlit.app/', github: '', kind: 'fraud',
+  },
+  {
+    id: 'planetpulse', name: 'PlanetPulse', subtitle: 'Carbon Footprint Tracker',
+    description: 'A thoughtful carbon footprint tracker.',
+    problem: 'Project details are available in the live application.',
+    solution: 'An interactive carbon footprint tracking project.',
+    features: ['Carbon footprint tracking'],
+    technologies: [],
+    live: 'https://planetpulse-q1n7.onrender.com', github: '', kind: 'planet',
+  },
+];

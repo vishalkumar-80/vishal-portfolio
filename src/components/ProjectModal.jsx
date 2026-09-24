@@ -1,0 +1,8 @@
+import React, { useEffect } from 'react';
+import { ArrowUpRight, X } from 'lucide-react';
+import Preview from './Previews';
+export default function ProjectModal({project,onClose}) {
+ useEffect(()=>{if(!project)return;const prev=document.body.style.overflow;document.body.style.overflow='hidden';const key=e=>e.key==='Escape'&&onClose();window.addEventListener('keydown',key);return()=>{document.body.style.overflow=prev;window.removeEventListener('keydown',key)}},[project,onClose]);
+ if(!project)return null;
+ return <div className="modal-backdrop" onMouseDown={e=>e.target===e.currentTarget&&onClose()}><article className="project-modal"><button className="modal-close" onClick={onClose} aria-label="Close project details"><X size={19}/></button><div className="modal-preview"><Preview kind={project.kind}/></div><div className="modal-copy"><div className="eyebrow">PROJECT DETAILS</div><h2>{project.name}</h2><p className="modal-subtitle">{project.subtitle}</p><p>{project.description}</p><div className="modal-columns"><div><h4>Problem</h4><p>{project.problem}</p></div><div><h4>Solution</h4><p>{project.solution}</p></div></div><h4>Features</h4><ul className="feature-list">{project.features.map(f=><li key={f}>{f}</li>)}</ul><div className="tag-list">{project.technologies.map(t=><span key={t}>{t}</span>)}</div><div className="modal-links">{project.github&&<a href={project.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15}/></a>}{project.live&&<a href={project.live} target="_blank" rel="noreferrer">Live Demo <ArrowUpRight size={15}/></a>}{project.backend&&<a href={project.backend} target="_blank" rel="noreferrer">Backend API <ArrowUpRight size={15}/></a>}</div></div></article></div>
+}
